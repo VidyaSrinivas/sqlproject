@@ -1,0 +1,32 @@
+create database employeeproject1
+use employeeproject1
+create table employee
+( empid int  constraint pk_emp primary key ,
+ name varchar(20) NOT NULL,
+ skillid int constraint fk_dept Foreign KEY references skill(id) 
+  ON DELETE SET NULL);
+
+ sp_help 'employee'
+
+ select * from employee;
+ insert into employee values(111,'john',2)
+ insert into employee values(113,'robort',1);
+ insert into employee values(118,'baharat',3);
+
+ create table skill
+ (
+  id int constraint pk_dept primary key ,
+  skillname varchar(15) NOT NULL,
+  
+  );
+
+  INSERT INTO skill VALUES(1,'ACCOUNT');
+  INSERT INTO skill VALUES(2,'finance');
+   INSERT INTO skill VALUEs(3,'sales');
+   INSERT INTO skill VALUES(4,'marketing');
+
+   select * from skill;
+   select * from employee;
+   
+
+  
